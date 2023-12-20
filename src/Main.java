@@ -17,14 +17,14 @@ public class Main {
         }
 
         // Количество несовершеннолетних детей
-//        long countChildren = persons.stream().filter(person -> person.getAge() < 18).count();
+        long countChildren = persons.stream().filter(person -> person.getAge() < 18).count();
 
         // Получение списка фамилий призывников (мужчин в возрасте от 18 до 27)
-//        List<String> listConscripts = persons.stream()
-//                .filter(person -> person.getSex().equals(Sex.MAN))
-//                .filter(person -> (person.getAge() > 17 && person.getAge() < 28))
-//                .map(person -> person.getFamily())
-//                .collect(Collectors.toList());
+        List<String> listConscripts = persons.stream()
+                .filter(person -> person.getSex().equals(Sex.MAN))
+                .filter(person -> (person.getAge() > 17 && person.getAge() < 28))
+                .map(person -> person.getFamily())
+                .collect(Collectors.toList());
 
         // Получение отсортированного по фамилиям списка людей
         // с высшим образованием от 18 до 60 лет для женщин и до 65 лет для мужчин
